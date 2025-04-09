@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EP4VHJ524E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EP4VHJ524E');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="PMP">
+  <meta name="keywords" content="Humanoid robot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobile-TV</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+  <script src="./static/js/isInViewport.min.js"></script>
+  <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./resources/favicon.ico">
+  
+  <script src="https://kit.fontawesome.com/006a5775d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Related Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://expressive-humanoid.github.io/">
+              Expressive Humanoid
+            </a>
+            <a class="navbar-item" href="https://robot-tv.github.io">
+              Open-TeleVision
+            </a>
+            <a class="navbar-item" href="https://ace-teleop.github.io">
+              ACE: Cross-platform Visual-Exoskeletons
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+             <span style="font-weight: normal;">Mobile-TeleVision: <br/><bold><b>P</b>redictive</bold> <b>M</b>otion <b>P</b>riors for Humanoid Whole-Body Control <br>
+             <!-- <h3 style="font-weight: normal;"> with <img src="resources/logo-192x192.png" alt="Logo" style="vertical-align: text-top;" width="35"><b><a href="https://robot-tv.github.io">TeleVision</a></b></h3> -->
+          </h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="">Chenhao Lu*</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://chengxuxin.github.io/">Xuxin Cheng*</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">Jialong Li*</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://aaronyang1223.github.io/">Shiqi Yang</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">Mazeyu Ji</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.yuanchengjing.com/">Chengjing Yuan</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+              <a href="https://www.episodeyang.com/">Ge Yang</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.cs.cmu.edu/~shayi/">Sha Yi</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://xiaolonw.github.io/">Xiaolong Wang</a>
+              <br><br>
+              <img src="./resources/UCSanDiegoLogo-BlueGold.png" width="20%" style="margin-right: 100px;"></img>    <img src="./resources/mit-logo.png" width="8%" style="margin-right: 100px;"></img> <br><br>
+            </span>
+            <span class="brmod">ICRA 2025</span><br>
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="./resources/pmp.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2412.07773" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>1x Videos</span>
+                </a>
+              </span> -->
+
+              <!-- <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="fab fa-bilibili"></i>
+                    </span>
+                    <span>Bilibili</span>
+                </a>
+              </span> -->
+              
+              <span class="link-block">
+                <a href="https://x.com/xuxin_cheng/status/1866875891391078418" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa-brands fa-x-twitter"></i>
+                  </span>
+                  <span>Summary</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/OpenTeleVision/TeleVision" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>TV Code</span>
+                </a>
+              </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom: 0">
+  <div class="container">
+    <div id="method_video" class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds no-bottom-padding">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+          <iframe 
+            src="https://www.youtube.com/embed/A_dYM5mzJ5c?si=PAQUdf18U-0DaPpK" 
+            title="YouTube video player" 
+            frameborder="0" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #bbb; border-radius: 10px;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Real-World Loco-Manipulation</h2>
+          <h5 style="text-align: center; font-weight: normal;">Robots walking, standing in place and manipulating objects with whole-body control.</h5>
+          <br>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/microwave-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                           
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/shelf-waist-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/fridge-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/pc-trash-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video playsinline autoplay loop muted controls src="./resources/clips/wheelchair-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted controls src="./resources/clips/elevator-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video playsinline autoplay loop muted controls src="./resources/clips/door-open-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted controls src="./resources/clips/b1-tennis-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video playsinline autoplay loop muted controls src="./resources/clips/scooter-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted controls src="./resources/clips/cart-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+              <br>
+              <br>
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Cross-Country Whole-Body Control</h2>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/remote/mit-remote-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/remote/ann-arbor-remote-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+
+                </div>
+              </div>
+              
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Robustness</h2>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/stand-walk-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/robustness-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/g1/g1-halloween-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/g1/g1-walk-robust-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Motions from MoCap Data</h2>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/sim/h12-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                  <span>Unitree H1</span>
+
+
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/sim/gr1-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  <span>Fourier GR1</span>
+
+                </div>
+              </div>
+              
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Humanoid robots require both robust lower-body locomotion and precise upper-body manipulation to conduct diverse tasks. While recent RL approaches robustly train whole-body loco-manipulation policies, they often lack precise manipulation with high DoF arms. In this paper, we propose decoupling upper-body control from locomotion, using inverse kinematics (IK) and motion retargeting for precise manipulation, while RL is focused on robust lower-body locomotion. However, this decoupling can reduce system robustness. To address this, we introduce <b>PMP (Predictive Motion Priors)</b>, trained with a Conditional Variational Autoencoder (CVAE) to represent upper-body motion. We train the policy conditioned on this upper-body motion representation for robust locomotion. Our experiments show that CVAE features are crucial for maintaining robustness and that our approach significantly outperforms RL-based whole-body control in precise manipulation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Team</h2>
+      <div class="columns is-centered">
+        <div class="column is-3">
+          <a href="">
+            <img src="./resources/authors/ch.png" alt="Chenhao Lu" style="width:80%; border-radius:50%;">
+          </a>
+          <p><b>Chenhao Lu*</b></p>
+        </div>
+        <div class="column is-3">
+          <a href="https://chengxuxin.github.io/">
+            <img src="./resources/authors/cxx.png" alt="Xuxin Cheng" style="width:80%; border-radius:50%;">
+          </a>
+          <p><b>Xuxin Cheng*</b></p>
+        </div>
+        <div class="column is-3">
+          <a href="">
+            <img src="./resources/authors/jl.png" alt="Jialong Li" style="width:80%; border-radius:50%;">
+          </a>
+          <p><b>Jialong Li*</b></p>
+        </div>
+        <div class="column is-3">
+          <a href="https://aaronyang1223.github.io/">
+            <img src="./resources/authors/sq.png" alt="Shiqi Yang" style="width:80%; border-radius:50%;">
+          </a>
+          <p><b>Shiqi Yang</b></p>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-3">
+          <a href="">
+            <img src="./resources/authors/may.png" alt="Mazeyu Ji" style="width:80%; border-radius:50%;">
+          </a>
+          <p><b>Mazeyu Ji</b></p>
+        </div>
+        <div class="column is-3">
+          <a href="https://www.yuanchengjing.com/">
+            <img src="./resources/authors/ycj.png" alt="Chengjing Yuan" style="width:80%; border-radius:50%;">
+          </a>
+          <p><b>Chengjing Yuan</b></p>
+        </div>
+        <div class="column is-3">
+          <a href="https://www.episodeyang.com/">
+            <img src="./resources/authors/yg.png" alt="Ge Yang" style="width:80%; border-radius:50%;">
+          </a>
+          <p><b>Ge Yang</b></p>
+        </div>
+        <div class="column is-3">
+          <a href="https://www.cs.cmu.edu/~shayi/">
+            <img src="./resources/authors/sy.png" alt="Sha Yi" style="width:80%; border-radius:50%;">
+          </a>
+          <p><b>Sha Yi</b></p>
+        </div>
+        <div class="column is-3">
+          <a href="https://xiaolonw.github.io/">
+            <img src="./resources/authors/xl.png" alt="Xiaolong Wang" style="width:80%; border-radius:50%;">
+          </a>
+          <p><b>Xiaolong Wang</b></p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="titile">BibTeX</h2>
+    <pre><code>
+@article{lu2024pmp,
+title={Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control},
+author={Lu, Chenhao and Cheng, Xuxin and Li, Jialong and Yang, Shiqi and Ji, Mazeyu and Yuan, Chengjing and Yang, Ge and Yi, Sha and Wang, Xiaolong},
+journal={arXiv preprint arXiv:2412.07773},
+year={2024}
+}
+</code></pre>
+  </div>
+</section>
+
+
+</body>
+
+<script>
+  var mainLoopId = setInterval(function(){
+        $('video').not('#teaser').each(function(){
+      if ($(this).is(":in-viewport")) {
+          $(this)[0].play();
+      } else {
+          $(this)[0].pause();
+      }
+      })
+    },200);
+</script>
+
+</html>
