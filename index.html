@@ -15,7 +15,7 @@
   <meta name="description" content="PMP">
   <meta name="keywords" content="Humanoid robot">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mobile-TV</title>
+  <title>TOP</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -84,8 +84,8 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
              <!-- <span style="font-weight: normal;">Mobile-TeleVision: <br/><bold><b>P</b>redictive</bold> <b>M</b>otion <b>P</b>riors for Humanoid Whole-Body Control <br> -->
-             <span style="font-weight: normal;">TOP: <br/><bold><b>T</b>ime</bold> <b>O</b>ptimization <b>P</b>olicy conditioned on controller for
-              Humanoid Whole-body Standing Control <br>
+             <span style="font-weight: normal;">TOP: <br/><bold><b>T</b>ime</bold> <b>O</b>ptimization <b>P</b>olicy for
+              Humanoid Robot Standing Manipulation Stably and Accurately <br>
              <!-- <h3 style="font-weight: normal;"> with <img src="resources/logo-192x192.png" alt="Logo" style="vertical-align: text-top;" width="35"><b><a href="https://robot-tv.github.io">TeleVision</a></b></h3> -->
           </h1>
           <div class="is-size-4 publication-authors">
@@ -109,7 +109,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="./resources/pmp.pdf" target="_blank"
+                <a href="./resources/2025_RAL-v2.pdf" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -200,7 +200,8 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Humanoid robots require both robust lower-body locomotion and precise upper-body manipulation to conduct diverse tasks. While recent RL approaches robustly train whole-body loco-manipulation policies, they often lack precise manipulation with high DoF arms. In this paper, we propose decoupling upper-body control from locomotion, using inverse kinematics (IK) and motion retargeting for precise manipulation, while RL is focused on robust lower-body locomotion. However, this decoupling can reduce system robustness. To address this, we introduce <b>PMP (Predictive Motion Priors)</b>, trained with a Conditional Variational Autoencoder (CVAE) to represent upper-body motion. We train the policy conditioned on this upper-body motion representation for robust locomotion. Our experiments show that CVAE features are crucial for maintaining robustness and that our approach significantly outperforms RL-based whole-body control in precise manipulation.
+            <!-- Humanoid robots require both robust lower-body locomotion and precise upper-body manipulation to conduct diverse tasks. While recent RL approaches robustly train whole-body loco-manipulation policies, they often lack precise manipulation with high DoF arms. In this paper, we propose decoupling upper-body control from locomotion, using inverse kinematics (IK) and motion retargeting for precise manipulation, while RL is focused on robust lower-body locomotion. However, this decoupling can reduce system robustness. To address this, we introduce <b>PMP (Predictive Motion Priors)</b>, trained with a Conditional Variational Autoencoder (CVAE) to represent upper-body motion. We train the policy conditioned on this upper-body motion representation for robust locomotion. Our experiments show that CVAE features are crucial for maintaining robustness and that our approach significantly outperforms RL-based whole-body control in precise manipulation. -->
+            Humanoid robots have the potential capability to perform a diverse range of manipulation tasks, but this is based on a robust and precise standing controller. Existing method is either ill-suited to precisely control high-dimensional upper-body joints, or difficult to ensure both robustness and accuracy, especially when upper-body motions are fast and may exceed the execution capability of the robot. This paper proposes TOP, a novel time optimization policy, to train a standing manipulation control model that ensures balance, precision, and time efficiency simultaneously, with the idea of adjusting the time trajectory of upper-body motions but not only strengthening the disturbance resistance of the lower-body. Our method consists of three parts. Firstly, we utilize motion prior by training a variational autoencoder (VAE) to represent upper body motions to enhance the interaction between the upper and lower-body controllers. Then we decouple the whole-body control into an upper-body PD controller for precision and a lower-body RL controller to enhance robust stability. Finally, we train TOP method combined with the decoupled controller and VAE to reduce the balance burden from rapid upper-body motions that could destabilize the robot and exceed the capabilities of the lower-body RL policy. The effectiveness of the proposed approach is evaluated via both simulation and real world experiments, which demonstrate the superiority on standing manipulation tasks stably and accurately. 
           </p>
         </div>
       </div>
@@ -214,21 +215,24 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Real-World Loco-Manipulation</h2>
-          <h5 style="text-align: center; font-weight: normal;">Robots walking, standing in place and manipulating objects with whole-body control.</h5>
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Real World Manipulation</h2>
+          <h5 style="text-align: center; font-weight: normal;">Robots standing in place and manipulating objects with our TOP methods.</h5>
           <br>
           <tr>
             <td>
               <div class="row">
                 <div class="col">
-                    <video autoplay muted loop playsinline controls src="./resources/clips/microwave-comp.mp4" width="100%"
-                           style="border-radius:10px; "></video>
-                           
+                    <video autoplay muted loop playsinline controls src="./resources/videos/teleoperation/grab_cup.MOV" width="80%"
+                           style="border-radius:10px; transform: scaleY(-1)"></video>
                 </div>
                 <div class="col">
-                  <video autoplay muted loop playsinline controls src="./resources/clips/shelf-waist-comp.mp4" width="100%"
-                         style="border-radius:10px; "></video>
+                  <video autoplay muted loop playsinline controls src="./resources/videos/teleoperation/grab_water.MOV" width="80%"
+                         style="border-radius:10px; transform: scaleY(-1);"></video>
                 </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/fridge-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
               </div>
               <br>
               <div class="row">
@@ -287,7 +291,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Cross-Country Whole-Body Control</h2>
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Ablation Experiment of TOP</h2>
           <tr>
             <td>
               <div class="row">
@@ -314,7 +318,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Robustness</h2>
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Robustness of RL Without TOP</h2>
           <tr>
             <td>
               <div class="row">
@@ -351,7 +355,8 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Motions from MoCap Data</h2>
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Generalization of Motion Priors
+          </h2>
           <tr>
             <td>
               <div class="row">
@@ -359,8 +364,35 @@
                     <video autoplay muted loop playsinline controls src="./resources/clips/sim/h12-comp.mp4" width="100%"
                            style="border-radius:10px; "></video>
                   <span>Unitree H1</span>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/sim/gr1-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  <span>Fourier GR1</span>
+
+                </div>
+              </div>
+              
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
 
 
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Simulation</h2>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <video autoplay muted loop playsinline controls src="./resources/clips/sim/h12-comp.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                  <span>Unitree H1</span>
                 </div>
                 <div class="col">
                   <video autoplay muted loop playsinline controls src="./resources/clips/sim/gr1-comp.mp4" width="100%"
@@ -449,19 +481,19 @@
 
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container content">
     <h2 class="titile">BibTeX</h2>
     <pre><code>
-<!-- @article{lu2024pmp,
+@article{lu2024pmp,
 title={Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control},
 author={Lu, Chenhao and Cheng, Xuxin and Li, Jialong and Yang, Shiqi and Ji, Mazeyu and Yuan, Chengjing and Yang, Ge and Yi, Sha and Wang, Xiaolong},
 journal={arXiv preprint arXiv:2412.07773},
 year={2024}
-} -->
+}
 </code></pre>
   </div>
-</section>
+</section> -->
 
 
 </body>
