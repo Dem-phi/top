@@ -36,7 +36,7 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 
-  <link rel="icon" href="./resources/favicon.ico">
+  <link rel="icon" href="./resources/robot.ico">
   
   <script src="https://kit.fontawesome.com/006a5775d5.js" crossorigin="anonymous"></script>
 </head>
@@ -226,7 +226,7 @@
                            style="border-radius:10px; "></video>
                 </div>
                 <div class="col">
-                  <video autoplay muted loop playsinline controls src="./resources/videos/manipulation/deliver_water.mp4" width="95%"
+                  <video autoplay muted loop playsinline controls src="./resources/videos/manipulation/deliver_water.mp4" width="90%"
                          style="border-radius:10px; ;"></video>
                 </div>
                 <div class="col">
@@ -234,28 +234,23 @@
                          style="border-radius:10px; "></video>
               </div>
               </div>
-              <!-- <br>
+              <br>
               <div class="row">
                 <div class="col">
-                    <video autoplay muted loop playsinline controls src="./resources/clips/fridge-comp.mp4" width="100%"
+                    <video autoplay muted loop playsinline controls src="./resources/videos/manipulation/open_oven.mp4" width="94%"
                            style="border-radius:10px; "></video>
                 </div>
                 <div class="col">
-                  <video autoplay muted loop playsinline controls src="./resources/clips/pc-trash-comp.mp4" width="100%"
+                  <video autoplay muted loop playsinline controls src="./resources/videos/manipulation/take_book.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/videos/manipulation/carry_box.mp4" width="100%"
                          style="border-radius:10px; "></video>
                 </div>
               </div>
               <br>
-              <div class="row">
-                <div class="col">
-                    <video playsinline autoplay loop muted controls src="./resources/clips/wheelchair-comp.mp4" width="100%"
-                           style="border-radius:10px; "></video>
-                </div>
-                <div class="col">
-                  <video playsinline autoplay loop muted controls src="./resources/clips/elevator-comp.mp4" width="100%"
-                         style="border-radius:10px; "></video>
-                </div>
-              </div> -->
+
 
               <br>
               <br>
@@ -271,11 +266,12 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Ablation Experiment of TOP</h2>
+          <h5 style="text-align: center; font-weight: normal;">Without TOP methods, the robot may take a step or fall, because of the impact of momentum changes.</h5>
           <tr>
             <td>
               <div class="row">
                 <div class="col">
-                    <video autoplay muted loop playsinline controls src="./resources/videos/TOP/wo_TOP_Fly.mp4" width="100%"
+                    <video autoplay muted loop playsinline controls src="./resources/videos/TOP/wo_TOP_Fly.mp4" width="96%"
                            style="border-radius:10px; "></video>
                 </div>
                 <div class="col">
@@ -283,15 +279,17 @@
                          style="border-radius:10px; "></video>
                 </div>
                 <div class="col">
-                  <video autoplay muted loop playsinline controls src="./resources/videos/TOP/wo_TOP_Inspect.mp4" width="100%"
+                  <video autoplay muted loop playsinline controls src="./resources/videos/TOP/wo_TOP_Inspect.mp4" width="95%"
                          style="border-radius:10px; "></video>
                 </div>
               </div>
-              <span>Motions Without TOP, may lead to take a step or fall, XXXXXXXXXXX</span>
               <br>
+          <h5 style="text-align: center; font-weight: normal;">With the help of TOP methods, the balance burden and unpredicted
+            inference caused by the lower-body can be reduced, which enhances both the balance stability and the precision of upper-body motions. </h5>
+
               <div class="row">
                 <div class="col">
-                    <video autoplay muted loop playsinline controls src="./resources/videos/TOP/TOP_Fly.mp4" width="100%"
+                    <video autoplay muted loop playsinline controls src="./resources/videos/TOP/TOP_Fly.mp4" width="97%"
                            style="border-radius:10px; "></video>
                 </div>
                 <div class="col">
@@ -299,7 +297,7 @@
                          style="border-radius:10px; "></video>
                 </div>
                 <div class="col">
-                  <video autoplay muted loop playsinline controls src="./resources/videos/TOP/TOP_Inspect.mp4" width="100%"
+                  <video autoplay muted loop playsinline controls src="./resources/videos/TOP/TOP_Inspect.mp4" width="97%"
                          style="border-radius:10px; "></video>
                 </div>
                 <div class="col">
@@ -372,14 +370,14 @@
             <td>
               <div class="row">
                 <div class="col">
-                    <video autoplay muted loop playsinline controls src="./resources/videos/simulation/TOP_simulation.mp4" width="100%"
+                    <video autoplay muted loop playsinline controls src="./resources/videos/simulation/VAE_dataset_M.mp4" width="100%"
                            style="border-radius:10px; "></video>
-                  <span>VAE origin motions</span>
+                  <span>Motions in training Dataset M</span>
                 </div>
                 <div class="col">
-                  <video autoplay muted loop playsinline controls src="./resources/videos/simulation/wo_TOP_simulation.mp4" width="100%"
+                  <video autoplay muted loop playsinline controls src="./resources/videos/simulation/VAE_dataset_T.mp4" width="100%"
                          style="border-radius:10px; "></video>
-                  <span>VAE reconstructed motions</span>
+                  <span>Motions in unseen Dataset T</span>
 
                 </div>
               </div>
